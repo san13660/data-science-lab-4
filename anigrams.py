@@ -5,6 +5,24 @@ from collections import Counter
 import re
 import sys
 
+#Funcion para calcular unigramas y frecuencias
+def calcular_frecuencias_unigrama(sequence):
+    print (sequence)
+    uniques=[]
+    for i in sequence:
+        if (i not in uniques):
+            uniques.append(i)
+    cants = []
+    for i in uniques:
+        cants.append(sequence.count(i))
+    final =[]
+    for i in range(len(uniques)-1):
+        a=[]
+        a.append(uniques[i])
+        a.append(cants[i])
+        final.append(a)
+    return final
+
 text = ''
 #with open(sys.argv[1], 'r', encoding='utf-8') as infile:
 #    for line in infile:
