@@ -1,1 +1,5 @@
 *.txt
+/env
+/.vscode
+
+!requirements.txt
