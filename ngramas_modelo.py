@@ -2,7 +2,7 @@
 # Data Science 1 - Seccion 10
 # Christopher Sandoval 13660
 # Maria Fernanda Estrada 14198
-# *
+# Estuardo Díaz 16110
 # *
 # 20/08/2020
 # Programa para generar el modelo con n-gramas
@@ -20,8 +20,7 @@ import sys
 # Leer archivo ya preprocesado
 print('Cargando archivo...')
 file = open(sys.argv[1], encoding="utf8")
-text = file.read()
-text = text[0:10000000]
+text = file.read()[0:10000000]
 
 # Tokenizar para generar n-gramas
 tokenized_text = [list(map(str.lower, word_tokenize(sent))) 
@@ -30,6 +29,7 @@ tokenized_text = [list(map(str.lower, word_tokenize(sent)))
 # Crear n-gramas y modelo. Se calculan las probabilidaddes de cada n-grama
 print('Creando Modelo...')
 
+# Se entrena el modelo usando 3-gramas
 n = 3
 train_data, padded_sents = padded_everygram_pipeline(n, tokenized_text)
 
