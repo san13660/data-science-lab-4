@@ -2,11 +2,10 @@
 # Data Science 1 - Seccion 10
 # Christopher Sandoval 13660
 # Maria Fernanda Estrada 14198
-# *
+# Estuardo Díaz 16110
 # *
 # 20/08/2020
 # Programa para saber la cantidad de cada palabra en un archivo de texto y mostrar el top 10
-
 
 # Liberias
 import collections
@@ -15,11 +14,11 @@ import sys
 
 # Leer un archivo indicado en la terminal
 file = open(sys.argv[1], encoding="utf8")
-a= file.read()
+text = file.read()
 
 # Separar las palabras por espacio y contar una por una. Si todavia no esta en el diccionario, la agrega y suma 1. Si ya esta, solo suma 1
 wordcount = {}
-for word in a.split():
+for word in text.split():
     if word not in wordcount:
         wordcount[word] = 1
     else:
