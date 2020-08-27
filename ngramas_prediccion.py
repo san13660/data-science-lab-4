@@ -2,7 +2,7 @@
 # Data Science 1 - Seccion 10
 # Christopher Sandoval 13660
 # Maria Fernanda Estrada 14198
-# *
+# Estuardo Díaz 16110
 # *
 # 20/08/2020
 # Programa para predecir (probar el modelo generado)
@@ -15,10 +15,10 @@ import sys
 # Leer el archivo que contiene el modelo y cargarlo
 print('Cargando archivo...')
 file = open(sys.argv[1], encoding="utf8")
-text = file.read()
-text = text[0:10000000]
+text = file.read()[0:10000000]
 unique_words = set(text.split(' '))
 
+# Cargar modelo usando la libreria pickle
 print('Cargando modelo...')
 with open(sys.argv[1].replace('.txt','_model.pickle'), 'rb') as input_file:
     model = pickle.load(input_file)
