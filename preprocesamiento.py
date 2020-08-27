@@ -123,3 +123,5 @@ with open(sys.argv[1], 'r', encoding='utf-8') as infile:
         line = process_line(line)
         with open('preprocesado_'+sys.argv[1], 'a', encoding='utf-8') as the_file:
             the_file.write(line + '\n')
+
+print('Archivo preprocesado guardado (' + sys.argv[1].replace('.txt','_model.pickle') + ')')
